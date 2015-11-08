@@ -1,4 +1,5 @@
 import glob
+import os
 import main_html_functions
 
 input_file = open( "/Users/carlosgarzon/Desktop/DynamicBible/Bereshit_Data_Parsed.txt", "r")
@@ -42,8 +43,13 @@ for index, var_list in enumerate(lines_list):
 
 		if current_chapter > prev_chapter:
 			# The OPEN function returns a file object
-			new_write_file = "ch" + current_chapter + "_bereshit.txt"
-			write_file = open("/Users/carlosgarzon/Desktop/DynamicBible/ch_data/"+new_write_file,"w")
+			new_write_file = "ch" + current_chapter  + "_bereshit.txt"
+			new_write_folder = "bereshit"+"Ch" + current_chapter
+			#make a folder
+			if not os.path.exists("/Users/carlosgarzon/Desktop/DynamicBible/ch_data/"+new_write_folder):
+			    os.makedirs("/Users/carlosgarzon/Desktop/DynamicBible/ch_data/"+new_write_folder)
+			#write the file
+			write_file = open("/Users/carlosgarzon/Desktop/DynamicBible/ch_data/"+new_write_folder+"/"+new_write_file,"w")
 			new_chapter = True
 
 		#Lines Loop
