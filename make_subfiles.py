@@ -1,7 +1,7 @@
 import glob
 import main_html_functions
 
-input_file = open( "/Users/carlosgarzon/Desktop/Bereshit/Bereshit_Data_Parsed.txt", "r")
+input_file = open( "/Users/carlosgarzon/Desktop/DynamicBible/Bereshit_Data_Parsed.txt", "r")
 
 #read file into a list of lines
 lines_list = input_file.read().splitlines()
@@ -10,9 +10,9 @@ lines_list = input_file.read().splitlines()
 input_file.close()
 
 # The OPEN function returns a file object
-write_file = open("/Users/carlosgarzon/Desktop/Bereshit/ch_data/ch1_bereshit.txt","w")
+write_file = open("/Users/carlosgarzon/Desktop/DynamicBible/ch_data/ch1_bereshit.txt","w")
 
-prev_chapter = "1"
+prev_chapter = "0"
 current_chapter = "1"
 valid_verse = False
 new_chapter = False
@@ -43,7 +43,7 @@ for index, var_list in enumerate(lines_list):
 		if current_chapter > prev_chapter:
 			# The OPEN function returns a file object
 			new_write_file = "ch" + current_chapter + "_bereshit.txt"
-			write_file = open("/Users/carlosgarzon/Desktop/Bereshit/ch_data/"+new_write_file,"w")
+			write_file = open("/Users/carlosgarzon/Desktop/DynamicBible/ch_data/"+new_write_file,"w")
 			new_chapter = True
 
 		#Lines Loop

@@ -23,6 +23,12 @@ eight_w_verses2= "English_AHL"			# the eng and ahl numbers
 def remColon( chapterVerse ):
 	return chapterVerse.replace(":","_")
 
+def replaceColon_Space( chapterVerse ):
+	return chapterVerse.replace(":"," ")
+
+def gen_write( write_file, write_word ):
+	write_file.write( write_word )
+
 ######################################
 # Arguments
 ######################################
