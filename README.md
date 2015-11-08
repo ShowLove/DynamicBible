@@ -1,0 +1,1 @@
+Dynamic mechanical translation of the bible

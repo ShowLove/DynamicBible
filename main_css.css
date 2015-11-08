@@ -1,0 +1,12 @@
+	div.change_verse_state div { display:inline-block;
+		float:right; width:30%; font-size:100%;font-family:David; padding:5px;
+		height:20; border-color:black; border-style: solid; 
+		border-width: 20px; border-radius: 5px; margin:auto;}
+
+	/* each word takes 14% of the space */
+	div.Heb_Transliteration div { display:inline-block; color:white;
+		float:right; width:10%; text-align:right; font-size:175%; font-weight: bold; font-family: Ezra Sil, Ezra Sil SR, CODE2000, Times New Roman, times, serif; padding:3px;}
+
+	/* each word takes 14% of the space */
+	div.English_AHL div { display:inline-block; color:red;
+		float:right; width:10%; text-align:right; font-size:80%;font-family:David; padding:3px;}
