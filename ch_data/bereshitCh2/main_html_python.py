@@ -1,15 +1,32 @@
 # -*- coding: utf-8 -*-
 
 import main_html_functions
+import sys	#for command line arguments
 
-#main_html_python.py#
+#main_html_python.py#http://showlove.github.io/DynamicBible/ch_data/bereshitCh2/ch2.html#
 #################################Part 1###############################################
 ######################################################################################
 # This should set up Heb Eng of changeChapterLanguage porition of js
 ######################################################################################
-#open the file
-ch = "2"
-filePath = "/Users/carlosgarzon/Desktop/DynamicBible/ch_data/"+"bereshitCh"+ch+"/"
+ 
+# Get the total number of args passed
+num_arguments = len(sys.argv)
+ 
+# Get the arguments list 
+cmdargs = str(sys.argv)
+ 
+# Print it
+print ("The total numbers of args passed to the script: %d " % num_arguments)
+print ("Args list: %s " % cmdargs)
+
+# str(sys.argv[0])	name of file you are compiling
+# str(sys.argv[1])	chapter
+# str(sys.argv[2])	filePath not including ber..ch folder
+# Python main_html_python.py  2 /Users/carlosgarzon/Desktop/DynamicBible/ch_data/
+# Python main_js_python.py  2 /Users/carlosgarzon/Desktop/DynamicBible/ch_data/
+
+ch = sys.argv[1]
+filePath = sys.argv[2]+"bereshitCh"+ch+"/"
 readFile = "ch"+ch+"_bereshit.txt"
 writeFile = "ch"+ch+".html"
 input_file = open( filePath+readFile, "r")
@@ -23,6 +40,7 @@ input_file.close()
 write_file = open(filePath+writeFile,"w")
 
 write_file.write(""" <!--div id index, chapter_vers, Language, line -->\n """)
+write_file.write(""" <!--http://showlove.github.io/DynamicBible/ch_data/bereshitCh2/ch2.html -->\n """)
 
 #Writess the top portion of html code
 main_html_functions.header( write_file )
