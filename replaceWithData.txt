@@ -1,3 +1,8 @@
 replace 	in~him 9990 --> 		in~him 9990 9990
 			to~you(mp) 9991-->	to~you(mp) 9991 9991
 			to~them(mp) 9992--> 	to~them(mp) 9992 9992
+
+
+// Copy a file into many files
+
+find bereshitCh1 bereshitCh2 bereshitCh bereshitCh4 bereshitCh5 bereshitCh6 bereshitCh7 bereshitCh8 bereshitCh9 bereshitCh10 bereshitCh11 bereshitCh12 bereshitCh12 bereshitCh13 bereshitCh14 bereshitCh15 bereshitCh16 bereshitCh17 bereshitCh18 bereshitCh19 bereshitCh20 bereshitCh21 bereshitCh22 bereshitCh23 bereshitCh23 bereshitCh24 bereshitCh25 bereshitCh26 bereshitCh27 bereshitCh28 bereshitCh29 bereshitCh30 bereshitCh31 bereshitCh32 bereshitCh33 bereshitCh34 bereshitCh35 bereshitCh36 bereshitCh37 bereshitCh38 bereshitCh39 bereshitCh40 bereshitCh41 bereshitCh42 bereshitCh43 bereshitCh44 bereshitCh45 bereshitCh46 bereshitCh47 bereshitCh48 bereshitCh49 bereshitCh50 -exec cp main_html_python.py {} \;
